@@ -1,0 +1,16 @@
+.make-it-pop-purple {
+  filter: drop-shadow(0 0 10px purple);
+}
+
+.make-it-pop-yellow {
+  filter: drop-shadow(0 0 5px #f5da55);
+}
+
+.node_npm_versions {
+  text-align: left;
+  margin-left: 5%;
+}
+
+.node_npm_versions p {
+  font-size: 1.5em;
+}

@@ -1,40 +1,224 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/mon∏okai.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/styles/atom-one-dark.min.css">
+  <script type="module">
+    import hljs from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/es/highlight.min.js';
+    import js from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/es/languages/javascript.min.js';
+    hljs.registerLanguage('js', js);
+  </script>
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <img src="./img/react-icon.png" alt="react-icon">
+        <h1>React</h1>
+        <p>JS библиотека с открытым исходным кодом для разработки юзер интерфейсов</p>
+      </section>
+
+      <section>
+        <h3>🧐 Краткая История</h3>
+        <ul>
+          <li>Впервые React использовался в новостной ленте Facebook в 2011 году и позже в ленте Instagram в
+            2012 году
+          </li>
+          <li>Исходный код React открыт в мае 2013 года на конференции «JSConf US»</li>
+        </ul>
+      </section>
+
+      <section>
+        <section>
+          <h1>Why React?</h1>
+          <img src="./img/sticker.webp" alt="">
+        </section>
+        <section>
+          Facebook поддерживает React
+          <img src="./img/facebook-suppport.png" alt="facebook-suppport">
+        </section>
+        <section>
+          React имеет широкую поддержку сообщества
+          <img src="./img/community-support.png" alt="community-support">
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h1>✌️ JSX</h1>
+        </section>
+        <section>
+          <pre>
+            <code data-line-numbers>const element = <h1>Hello World!</h1>;</code>
+          </pre>
+        </section>
+        <section>
+          <h6>Встраивание выражений в JSX</h6>
+          <pre>
+            <code data-line-numbers data-trim>
+              const name = 'nFactorial Incubator';
+              const element = <h1>The best bootcamp is {name}</h1>;
+            </code>
+          </pre>
+        </section>
+        <section>
+          <pre>
+            <code data-line-numbers data-trim>
+              const getUserName = (user) => 
+                `${user.firstName} ${user.lastName}`;
+              
+              const user = { 
+                firstName: 'Aidyn', 
+                lastName: 'Ibrayev' 
+              };
+
+              const element = (
+                <h1>Hey {getUserName(user)}!</h1>;
+              )
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <pre>
+            <code data-line-numbers data-trim>
+              const element = (
+                <h1 className="greeting">
+                  Hello World!
+                </h1>
+              );
+            </code>
+          </pre>
+          <img src="./img/arrow-down.png" alt="arrow-down" width="100" height="100">
+          <pre>
+            <code data-line-numbers data-trim>
+              const element = React.createElement(
+                'h1',
+                {className: 'greeting'},
+                'Hello World!'
+              );
+            </code>
+          </pre>
+        </section>
+
+        <section section data-state="make-it-pop-yellow">
+          <h1 style="color: #f5da55;">Babel</h1>
+          <img src="./img/ryan bable.jpeg" alt="ryan">
+        </section>
+
+        <section>
+          <h1>😻</h1>
+          <img src="./img/babel.svg" alt="babel">
+        </section>
+
+        <section>
+          <h1>Что это?</h1>
+          <p>
+            Babel-транспортер преобразует синтаксис современного JavaScript в форму, которая может быть легко понята
+            старыми браузерами.
+          </p>
+        </section>
+
+        <section>
+          <div style="display: flex; justify-content: space-between;">
+            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+              <img src="./img/young.jpeg" alt="young" width="200" height="300">
+              <div style="margin-top: 20px; margin-left: -40px;">
+                <ul style="list-style-type: none;">
+                  <li>Кринж</li>
+                  <li>Рофл</li>
+                  <li>Краш</li>
+                </ul>
+              </div>
+            </div>
+            <div style="position: absolute; left: 300px; bottom: 10px;">
+              <img src="./img/arrow-right.png" alt="arrow-right" width="150" height="100">
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end;">
+              <img src="./img/old man.jpeg" alt="old" width="200" height="300">
+              <div style="margin-top: 20px;">
+                <ul style="list-style-type: none; text-align: right;">
+                  <li>Чувство стыда</li>
+                  <li>Подшутить</li>
+                  <li>Объект влюбленности</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>Современный JS</div>
+            <div>
+              <div style="position: absolute; left: 500px; bottom: 50px;">
+                <img src="./img/babel.svg" alt="babel" width="200" height="100">
+              </div>
+              <div style="position: absolute; left: 500px; bottom: -30px;">
+                <img src="./img/arrow-right.png" alt="arrow-right" width="150" height="100">
+              </div>
+            </div>
+            <div>
+              <img src="./img/internet-explorer.png" alt="internet-explorer" width="60" height="60">
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- <section>
+        <section>Leeeeeeeeeeeeet's goooooo!!!</section>
+        <section>
+          <h1>Create react app</h1>
+          <div class="node_npm_versions">
+            <p>Node >= 14.0.0</p>
+            <p>npm >= 5.6</p>
+          </div>
+        </section>
+        <section>
+          <h2>Создаем проект</h2>
+          <pre><code data-line-numbers data-trim>
+            npx create-react-app my-app 
+            cd my-app
+            npm start
+          </code></pre>
+        </section>
+      </section> -->
+
+      <section>
+        Styles
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    })
+  </script>
+</body>
+
 </html>
