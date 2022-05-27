@@ -97,9 +97,9 @@
           <pre>
             <code data-line-numbers data-trim>
               const element = (
-                <h1 className="greeting">
+                &lt;h1 className="greeting"&gt;
                   Hello World!
-                </h1>
+                &lt;h1&gt;
               );
             </code>
           </pre>
@@ -200,7 +200,81 @@
       </section> -->
 
       <section>
-        Styles
+        <section>
+          <h1>💅 Styles</h1>
+        </section>
+
+        <section>
+          <h3>Inline styles</h3>
+          <pre>
+            <code data-line-numbers data-trim>
+&lt;div
+  style={{
+    backgroundColor: &quot;red&quot;,
+    width: &quot;200px&quot;,
+    height: &quot;200px&quot;,
+  }}
+&gt;
+  &lt;h1 style={{ color: &quot;white&quot;, fontSize: &quot;30px&quot;}}&gt;
+    Hello World!
+  &lt;/h1&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+          <img src="./img/camel.jpeg" alt="camel" width="220" height="150" style="border-radius: 50%;">
+        </section>
+
+        <section>
+          <pre>
+            <code data-line-numbers data-trim>
+const divStyle = {
+  backgroundColor: &quot;red&quot;,
+  width: &quot;200px&quot;,
+  height: &quot;200px&quot;,
+};
+
+const h1Style = { color: &quot;white&quot;, fontSize: &quot;30px&quot; };
+
+&lt;div style={divStyle}&gt;
+  &lt;h1 style={h1Style}&gt;Hello World!&lt;/h1&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>Normal CSS</h3>
+          <p>Импортируем css файл</p>
+          <p style="text-align: left; margin-left: 50px;">App.js</p>
+          <pre>
+            <code data-line-numbers data-trim>
+              import './styles.css';
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p>styles.css</p>
+          <pre>
+            <code data-line-numbers data-trim>
+              .wrapper {
+                background-color: red;
+                width: 200px;
+                height: 200px;
+              }
+            </code>
+          </pre>
+          <p>App.js</p>
+          <pre>
+            <code data-line-numbers data-trim>
+              &lt;div className=&quot;wrapper&quot;/&gt;
+            </code>
+          </pre>
+        </section>
+      </section>
+
+      <section>
+        <h1>npm</h1>
       </section>
     </div>
   </div>
