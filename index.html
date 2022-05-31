@@ -55,6 +55,55 @@
           React имеет широкую поддержку сообщества
           <img src="./img/community-support.png" alt="community-support">
         </section>
+        <section>
+          React обновляет только то, что необходимо
+          <p>
+            Он строит внутри себя копию DOM дерева (Virtual DOM) и при улучшении приложения он просто сравнивает
+            предыдущую версию DOM
+            с новой, отыскивает изменения и эффективно внедряет их в интерфейс </p>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <p style="font-size: 50px;">🚘 Create react app</p>
+          <div class="node_npm_versions">
+            <p>Node >= 14.0.0</p>
+            <p>npm >= 5.6</p>
+          </div>
+          <p>Создаем проект</p>
+          <pre>
+            <code data-line-numbers data-trim>
+              npx create-react-app my-app 
+              cd my-app
+              npm start
+            </code>
+          </pre>
+
+          <p style="font-size: 24px;">npx - CLI инструмент с помощью которого можете запускать пакеты и файлы</p>
+        </section>
+
+        <section>
+          <p>Структура папок</p>
+          <pre>
+            <code data-trim>
+              my-app/
+                README.md
+                node_modules/
+                package.json
+                public/
+                  index.html
+                  favicon.ico
+                src/
+                  App.css
+                  App.js
+                  App.test.js
+                  index.css
+                  index.js
+                  logo.svg
+            </code>
+          </pre>
+        </section>
       </section>
 
       <section>
@@ -94,6 +143,53 @@
         </section>
 
         <section>
+          <p style="font-size: 50px;">Помните как работает функция <span style="color: #f5da55;">.map</span>?</p>
+        </section>
+
+        <section>
+          <pre>
+            <code data-line-numbers data-trim>
+              const numbers = [1, 2, 3, 4, 5];
+              const doubled = numbers.map((number) => number * 2);
+              doubled = ?
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p>Ответ: doubled = [2, 4, 6, 8, 10]</p>
+        </section>
+
+        <section>
+          <p>В React преобразование массивов в список элементов выглядит похожим образом.</p>
+        </section>
+
+        <section>
+          <pre>
+            <code data-line-numbers data-trim>
+              const numbers = [1, 2, 3, 4, 5];
+              const listItems = numbers.map((number, index) =>
+                &lt;li key={index}&gt;{number}&lt;/li&gt;
+              );
+              return &lt;ul&gt;{listItems}&lt;/ul&gt;;
+            </code>
+          </pre>
+          OR
+          <pre>
+            <code data-line-numbers data-trim>
+              const numbers = [1, 2, 3, 4, 5];
+              return (
+                &lt;ul&gt;
+                  {numbers.map((number, index) => (
+                    &lt;li key={index}&gt;{number}&lt;/li&gt;
+                  ))}
+                &lt;/ul&gt;
+              );
+            </code>
+          </pre>
+        </section>
+
+        <section>
           <pre>
             <code data-line-numbers data-trim>
               const element = (
@@ -123,6 +219,9 @@
         <section>
           <h1>😻</h1>
           <img src="./img/babel.svg" alt="babel">
+          <audio data-autoplay>
+            <source src="./audio/Glass Animals - Heat Waves (feat (mp3cut.net).mp3" type="audio/mpeg">
+          </audio>
         </section>
 
         <section>
@@ -179,25 +278,6 @@
         </section>
 
       </section>
-
-      <!-- <section>
-        <section>Leeeeeeeeeeeeet's goooooo!!!</section>
-        <section>
-          <h1>Create react app</h1>
-          <div class="node_npm_versions">
-            <p>Node >= 14.0.0</p>
-            <p>npm >= 5.6</p>
-          </div>
-        </section>
-        <section>
-          <h2>Создаем проект</h2>
-          <pre><code data-line-numbers data-trim>
-            npx create-react-app my-app 
-            cd my-app
-            npm start
-          </code></pre>
-        </section>
-      </section> -->
 
       <section>
         <section>
@@ -271,10 +351,225 @@ const h1Style = { color: &quot;white&quot;, fontSize: &quot;30px&quot; };
             </code>
           </pre>
         </section>
+
+        <section>
+          <p>CSS модули</p>
+          <p style="font-size: 24px;">⚠️ При использовании "normal" css могут возникнуть конфликты в именах классов</p>
+          &darr;
+          <p>[name].module.css</p>
+          <p>CSS модули позволяют использовать одно и то же имя класса CSS в разных файлах</p>
+        </section>
+
       </section>
 
       <section>
-        <h1>npm</h1>
+        <section>
+          <img src="./img/npm.png" alt="npm">
+          <h6>node package manager</h6>
+          <!-- <h6 style="color: #f5da55;">Ninja Pumpkin Mutants</h6> -->
+        </section>
+
+        <section>
+          <p>npmjs.com</p>
+          <img src="./img/npm-install.png" alt="npm-install">
+          <img src="./img/npm-publish.png" alt="npm-publish">
+        </section>
+        <!-- 
+        <section>
+          <p>Команды</p>
+          <img src="./img/npm commands.png" alt="npm commands">
+          <p>https://docs.npmjs.com/cli/v8/commands</p>
+        </section> -->
+
+        <section>
+          <p>✏️ Структура package.json</p>
+          <pre>
+            <code data-line-numbers data-trim>
+              {
+                "name": "my-app",
+                "version": "0.1.0",
+                "description": "my app's description"
+                "private": true,
+                "scripts": {
+                  ...
+                },
+                "dependencies": {
+                  ...
+                },
+                "devDependencies": {
+                  ...
+                },
+                "browserList": {
+                  ...
+                }
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <ul style="font-size: 24px; list-style: none;">
+            <li class="package_json_props"><span>private</span> — если данное свойство установлено в true, это позволяет
+              предотвратить случайную публикацию
+              пакета в
+              npm</li>
+            <li class="package_json_props"><span>scripts</span> — задаёт набор Node.js-скриптов, которые можно запускать
+            </li>
+            <li class="package_json_props"><span>dependencies</span> — содержит список npm-пакетов, от которых зависит
+              приложение.</li>
+            <li class="package_json_props"><span>devDependencies</span> — содержит список npm-пакетов, используемых при
+              разработке проекта, но не при его
+              реальной
+              работе</li>
+            <li class="package_json_props"><span>browserlist</span> — используется для хранения списка браузеров (и их
+              версий), которые должно поддерживать
+              приложение</li>
+          </ul>
+        </section>
+
+        <section>
+          <p>⚙️ npm scripts</p>
+          <p style="text-align: left;">
+            Файл package.json поддерживает возможность описания команд (скриптов), запускать которые можно с помощью
+            такой конструкции:
+          </p>
+          <pre>
+            <code data-line-numbers data-trim>
+              npm &lt;task-name&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p style="font-size: 50px;">🤵 dependencies</p>
+          <p style="font-size: 30px;">Это пакеты которые использует ваш проект на production-е</p>
+          <p style="font-size: 20px; text-align: left;">На самом деле production — это боевая среда. То есть та версия
+            продукта, которая
+            выложена онлайн / установлена клиенту.
+          </p>
+          <pre>
+            <code data-line-numbers data-trim>
+              "dependencies": {
+                "react": "^18.1.0",
+                "react-dom": "^18.1.0",
+                "react-scripts": "5.0.1"
+              }
+            </code>
+          </pre>
+
+          <p style="font-size: 30px;">Устанавливаем определенный пакет с помощью:</p>
+          <pre>
+            <code data-line-numbers data-trim>
+              npm install &lt;PACKAGENAME&gt;
+              npm install &lt;PACKAGENAME&gt; --save
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p style="font-size: 50px;">👷‍♂️ devDependencies</p>
+          <p style="font-size: 30px;">Это пакеты которые требуются при локальной разработке</p>
+          <pre>
+            <code data-line-numbers data-trim>
+              npm install &lt;PACKAGENAME&gt; --save-dev
+            </code>
+          </pre>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <img src="./img/jest.png" width="150" height="90">
+            <img src="./img/eslint.png" width="100" height="100">
+            <img src="./img/webpack.png" width="100" height="100">
+            <img src="./img/prettier.png" width="100" height="100">
+          </div>
+        </section>
+
+        <section>
+          <p>Куда npm устанавливает пакеты?</p>
+          <pre>
+            <code data-line-numbers data-trim>
+              npm install lodash
+            </code>
+          </pre>
+          &darr;
+          <p>📦 node_modules</p>
+          &darr;
+          <p>package.json &rarr; dependencies</p>
+
+          <!-- <p>
+            По умолчанию, когда для установки пакета используют команду наподобие npm install lodash, пакет оказывается
+            в папке node_modules, расположенной в папке проекта. Кроме того, если была выполнена вышеописанная команда,
+            npm также добавит запись о библиотеке lodash в раздел dependencies файла package.json, который имеется в
+            текущей директории.
+          </p> -->
+        </section>
+
+        <section>
+          <h1>🪗</h1>
+          <img src="./img/node_modules.webp" alt="">
+          <p>❗️ Не пушьте в git node_modules</p>
+        </section>
+
+        <section>
+          <p>✏️ package-lock.json</p>
+          <p style="font-size: 30px; text-align: left; font-weight: 100;">
+            При разработке определенного проекта всегда будут <span style="color: red;">bugs</span>
+          </p>
+          <p style="font-size: 30px; text-align: left; font-weight: 100;">
+            Мэйнтейнеры (так называют чуваков которые поддерживают запаблишенный проект) всегда будут их чинить 🧑‍🔧
+            и
+            деплоить новую версию проекта(пакета) 🚀.
+          </p>
+          <p style="font-size: 30px; text-align: left; font-weight: 100;">Цель файла package-lock.json — отслеживать
+            точную версию каждого
+            установленного пакета, чтобы продукт
+            воспроизводился на 100% таким же образом, даже если пакеты обновляются их мэйнтейнерами.</p>
+        </section>
+
+        <section>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <p>Аман</p>
+              <img src="./img/аман.gif" width="400" height="400">
+            </div>
+            <div>
+              <p>Усен</p>
+              <img src="./img/усен.gif" width="400" height="400">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <p>package.json Амана:</p>
+          <pre>
+            <code data-line-numbers data-trim>
+              "dependencies": {
+                "react": "^18.0.0"
+              }
+            </code>
+          </pre>
+          <p>Создал проект и запушил в гит</p>
+        </section>
+
+        <section style="text-align: left;">
+          <p>Усен сделал clone того же проекта</p>
+          <p class="package_json_props" style="font-size: 30px;">Затем он установил все зависимости с помощью <span>npm
+              install</span></p>
+          <p>package-lock.json:</p>
+          <pre>
+            <code data-line-numbers data-trim>
+              "react": {
+                "version": "18.1.0",
+                "resolved": "https://registry.npmjs.org/react/-/react-18.1.0.tgz",
+                "integrity": "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ==",
+                "requires": {
+                  "loose-envify": "^1.1.0"
+                }
+              },
+            </code>
+          </pre>
+        </section>
+      </section>
+      <section>
+        <img src="./img/thanks.jpeg">
       </section>
     </div>
   </div>

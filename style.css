@@ -6,11 +6,21 @@
   filter: drop-shadow(0 0 5px #f5da55);
 }
 
-.node_npm_versions {
-  text-align: left;
-  margin-left: 5%;
+.node_npm_versions p {
+  font-size: 1em;
+  background-color: #bfa003;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
 }
 
-.node_npm_versions p {
-  font-size: 1.5em;
+.package_json_props {
+  margin-top: 25px;
+}
+
+.package_json_props > span {
+  background-color: #bfa003;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
 }
