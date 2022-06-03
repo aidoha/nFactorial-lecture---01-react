@@ -1,26 +1,12 @@
-.make-it-pop-purple {
-  filter: drop-shadow(0 0 10px purple);
+.css-checkbox {
+	width: 30px;
+	height: 30px;
 }
 
 .make-it-pop-yellow {
-  filter: drop-shadow(0 0 5px #f5da55);
+	filter: drop-shadow(0 0 5px #f5da55);
 }
 
-.node_npm_versions p {
-  font-size: 1em;
-  background-color: #bfa003;
-  color: white;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.package_json_props {
-  margin-top: 25px;
-}
-
-.package_json_props > span {
-  background-color: #bfa003;
-  color: white;
-  padding: 5px;
-  border-radius: 10px;
+.make-it-pop-border {
+	border: 3px solid #f5da55;
 }
