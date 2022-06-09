@@ -21,45 +21,127 @@
     import js from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/es/languages/javascript.min.js';
     hljs.registerLanguage('js', js);
   </script>
+
+  <style>
+    .label {
+      color: #686f99;
+      font-size: 18px;
+      text-align: left;
+      margin: 0px !important;
+      padding: 0px;
+    }
+
+    .text {
+      color: white;
+      font-size: 18px;
+      text-align: left;
+      margin: 0px !important;
+      padding: 0px;
+    }
+  </style>
 </head>
+<!-- border-bottom: 20px solid #E01424; -->
 
 <body>
   <div class="reveal">
     <div class="slides">
-      <section>
-        <section>
-          <p style="font-size: 50px;">🚀 Create react app</p>
-          <p>Создаем проект</p>
-          <pre>
-            <code data-line-numbers data-trim>
-              npx create-react-app my-app 
-              cd my-app
-              npm start
-            </code>
-          </pre>
-        </section>
+      <section style="height: 100%;
+	display: flex !important;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;">
+        <div
+          style="height: 100%; display: flex !important; flex-direction: column; justify-content: center; align-items: flex-start; background: #0f111b; padding: 0px 0px 0 132px; gap: 100px;">
+          <div>
+            <h2>&#x2192; React Intro</h2>
+          </div>
+          <div style="display: flex; flex-direction: column; justify-content: space-around; gap: 15px;">
+            <div style="display: flex; flex-direction: row;  gap: 10px;">
+              <img src="./img/me.jpg" style="
+              vertical-align: middle;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              margin-bottom: 50px;
+              object-fit: cover;
+              padding: 0px; margin: 0px;">
+              <div style="display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              height: 60px;">
+                <p class="label">instructor</p>
+                <p class="text">@aidooha</p>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 10px;">
+              <img src="./img/n17r-logo-red.png" style="
+              vertical-align: middle;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              margin-bottom: 50px;
+              object-fit: cover;
+              padding: 0px; margin: 0px;">
+              <div style="display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              height: 60px;">
+                <p class="label">nfactorial incubator</p>
+                <p class="text">lecture 6</p>
+              </div>
+            </div>
+          </div>
+          <div style="position: absolute; right: 0;">
+            <img width="60%" alt="illustration for Accessible Cross-Browser CSS Form Styling"
+              src="./img/react-icon.png">
+          </div>
+
+        </div>
+        <div style="height: 20px; position: fixed; bottom: -20px; width: 100%; background-color:red;"></div>
       </section>
       <!-- <section>
-        <section>
-          <h1>Why React?</h1>
-          <img src="./img/sticker.webp" alt="">
-        </section>
-        <section>
-          Facebook поддерживает React
-          <img src="./img/facebook-suppport.png" alt="facebook-suppport">
-        </section>
-        <section>
-          React имеет широкую поддержку сообщества
-          <img src="./img/community-support.png" alt="community-support">
-        </section>
-        <section>
-          React обновляет только то, что необходимо
-          <p>
-            Он строит внутри себя копию DOM дерева (Virtual DOM) и при улучшении приложения он просто сравнивает
-            предыдущую версию DOM
-            с новой, отыскивает изменения и эффективно внедряет их в интерфейс </p>
-        </section>
+        <div style="display: flex;">
+          <div>
+            <p class="lecture-title">&rarr; React Intro</p>
+            <div>
+              <div style="display: flex; align-items: center;">
+                <div>
+                  <img src="./img/me.jpg" style="border-radius: 50%;" width="63" height="60" />
+                </div>
+                <div style="text-align:left; margin: 0 0 12px 10px;">
+                  <div style="color: #686F9A;font-size: 24px;">instructor</div>
+                  <div style="color: white;font-size: 24px;">@aidooha</div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <div>
+                  <img src="./img/n17r-logo-red.png" style="border-radius: 50%;" width="63" height="60" />
+                </div>
+                <div style="text-align:left; margin: 0 0 12px 10px;">
+                  <div style="color: #686F9A;font-size: 24px;">nfactorial incubator</div>
+                  <div style="color: white;font-size: 24px;">lecture 6</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="./img/react-icon.png" style="margin-left: 20%;" />
+          </div>
+        </div>
       </section> -->
+      <section>
+        <p style="font-size: 50px;">🚀 Create react app</p>
+        <p>Создаем проект</p>
+        <pre>
+          <code data-line-numbers data-trim>
+            npx create-react-app my-app 
+            cd my-app
+            npm start
+          </code>
+        </pre>
+      </section>
 
       <section>
         <section>
@@ -67,8 +149,8 @@
         </section>
         <section>
           <pre>
-              <code data-line-numbers>const element = <h1>Hello World!</h1>;</code>
-            </pre>
+            <code data-line-numbers>const element = <h1>Hello World!</h1>;</code>
+          </pre>
         </section>
         <section>
           <pre>
@@ -98,24 +180,24 @@
 
         <section>
           <pre>
-            <code data-line-numbers data-trim>
-              const element = (
-                &lt;h1 className="greeting"&gt;
-                  Hello World!
-                &lt;h1&gt;
-              );
-            </code>
-          </pre>
-          <img src="./img/arrow-down.png" alt="arrow-down" width="100" height="100">
+              <code data-line-numbers data-trim>
+                const element = (
+                  &lt;h1 className="greeting"&gt;
+                    Hello World!
+                  &lt;h1&gt;
+                );
+              </code>
+            </pre>
+          <img style="margin-top: 40px;" src="./img/arrow-down.png" alt="arrow-down" width="100" height="100">
           <pre>
-            <code data-line-numbers data-trim>
-              const element = React.createElement(
-                'h1',
-                {className: 'greeting'},
-                'Hello World!'
-              );
-            </code>
-          </pre>
+              <code data-line-numbers data-trim>
+                const element = React.createElement(
+                  'h1',
+                  {className: 'greeting'},
+                  'Hello World!'
+                );
+              </code>
+            </pre>
         </section>
 
         <section section data-state="make-it-pop-yellow">
@@ -268,8 +350,7 @@ const h1Style = { color: &quot;white&quot;, fontSize: &quot;30px&quot; };
         <section>
           <h1>Проблема</h1>
           <p style="font-size: 50px;">Традиционный JS</p>
-          <p style="font-size: 50px;">Jquery</p>
-          <p style="font-size: 50px;">🐢</p>
+          <p style="font-size: 90px;">🐢</p>
         </section>
         <section>
           <div>
@@ -345,7 +426,7 @@ const h1Style = { color: &quot;white&quot;, fontSize: &quot;30px&quot; };
           </div>
         </section>
         <section>
-          <div style="display: flex; align-items: center;">
+          <div style="display: flex; align-items: center; justify-content: center;">
             <img src="./img/real dom.png" width="550" height="350">
             <img src="./img/virtual dom.png" width="550" height="350">
           </div>
@@ -356,6 +437,23 @@ const h1Style = { color: &quot;white&quot;, fontSize: &quot;30px&quot; };
         <section>
           <img src="./img/real dom update.png">
         </section>
+      </section>
+
+
+      <section
+        style="height: 100%; display: flex !important; flex-direction: column; justify-content: center; align-items: center;">
+        <div
+          style="height: 100%; display: flex !important; flex-direction: column; justify-content: center; align-items: center; background: #0f111b;">
+          <img src="./img/me.jpg" style="
+            vertical-align: middle;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 50px;
+            object-fit: cover;">
+          <h2>Рахмет! 👋</h2>
+          <div style="height: 20px; position: fixed; bottom: 0; width: 100%; background-color:red;"></div>
+        </div>
       </section>
     </div>
   </div>

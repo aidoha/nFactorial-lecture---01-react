@@ -10,3 +10,21 @@
 .make-it-pop-border {
 	border: 3px solid #f5da55;
 }
+
+.lecture-title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 80px;
+	line-height: 77px;
+	color: #ffffff;
+	text-align: left;
+}
+
+.styled_div_wrapper {
+	height: 100%;
+	display: flex !important;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #0f111b;
+}
